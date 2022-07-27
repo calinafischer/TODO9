@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import s from '../Cadastro/Cadastro.module.css'
 
     const Cadastro = ()=>{
         const [inputEmail, setEmail] = useState('')
@@ -33,21 +34,23 @@ import React, {useState} from "react"
 
     <section>
 
-    <form>
-      <label>Seu nome:</label><input type="text"/>
-      <label>E-mail:</label><input type="email" value={inputEmail} onChange={({target})=> handleInputEmail(target)}/>
-      <label>CPF:</label><input type="text" value={inputCPF} onChange={({target})=> handleInputCPF(target)}/>
+    <form className={s.form}>
+      <label>Seu nome: </label><input type="text"/>
+      <label>E-mail: </label><input type="email" value={inputEmail} onChange={({target})=> handleInputEmail(target)}/>
+      <label>CPF: </label><input type="text" value={inputCPF} onChange={({target})=> handleInputCPF(target)}/>
       <div>
         <input type="radio" name="genero" value="masculino"/>
         <label htmlFor="masculino">Masculino</label>
         <input type="radio" name="genero" value="feminino"/>
         <label htmlFor="feminino">Feminino</label>
       </div>
-      <button onClick={(event)=>{
+
+      <button className={s.btn} onClick={(event)=>{
         event.preventDefault()
         validaEmail()
         validaCPF()
         }}>Enviar</button>
+
     </form>
 
     </section>

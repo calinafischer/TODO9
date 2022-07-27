@@ -1,0 +1,14 @@
+.form{
+    justify-content: center; 
+    top: 441px;
+left: 870px;  
+}
+
+.btn{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    width: 260px;
+}
+

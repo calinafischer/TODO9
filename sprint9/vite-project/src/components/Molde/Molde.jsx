@@ -10,8 +10,8 @@ const Molde = ({dados}) => {
         </div>
         <p className={s.titulo}>{name}</p>
         <p className={s.descricao}>{description}</p>
-        <p className={s.descricao}>De <span>{oldPrice}</span></p>
-        <p className={s.atual}>Por <b>{price}</b></p>
+        <p className={s.descricao}>De: R$<span>{oldPrice}</span></p>
+        <p className={s.atual}>Por: R$<b>{price}</b></p>
         <p className={s.descricao}>ou {installments.count} x de {installments.value}</p>
         <button className={s.btn}>Comprar</button>
     </div>
