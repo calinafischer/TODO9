@@ -3,7 +3,7 @@ import React, {useState} from "react"
     const Cadastro = ()=>{
         const [inputEmail, setEmail] = useState('')
         const [inputCPF, setCPF] = useState('')
-    } 
+    
 
     function handleInputEmail(target){
         setInputEmail(target.value)
@@ -33,7 +33,7 @@ import React, {useState} from "react"
 
     <section>
 
-    <form className={s.form}>
+    <form>
       <label>Seu nome:</label><input type="text"/>
       <label>E-mail:</label><input type="email" value={inputEmail} onChange={({target})=> handleInputEmail(target)}/>
       <label>CPF:</label><input type="text" value={inputCPF} onChange={({target})=> handleInputCPF(target)}/>
@@ -49,7 +49,9 @@ import React, {useState} from "react"
         validaCPF()
         }}>Enviar</button>
     </form>
-    
-    </section>
 
+    </section>
     )
+    }
+
+    export default Cadastro
