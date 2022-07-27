@@ -1,16 +1,21 @@
 import React from 'react'
+import s from '../Molde/Molde.module.css'
 
 const Molde = ({dados}) => {
-    const {id, image, name, description, oldPrice, price} = dados
+    const {id, image, name, description, oldPrice, price, installments} = dados
   return (
-    <div>
-        <img url= {image}></img>
-        <h1>{name}</h1>
-        <p>{description}</p>
-        <p>De <span>{oldPrice}</span></p>
-        <p>Por <span>{price}</span></p>
-        <button>Comprar</button>
+    <div className={s.container}>
+        <div className={s.containerimg}>
+        <img src={image}></img>
+        </div>
+        <p className={s.titulo}>{name}</p>
+        <p className={s.descricao}>{description}</p>
+        <p className={s.descricao}>De <span>{oldPrice}</span></p>
+        <p className={s.atual}>Por <b>{price}</b></p>
+        <p className={s.descricao}>ou {installments.count} X De {installments.value}</p>
+        <button className={s.btn}>Comprar</button>
     </div>
+    
   )
 }
 
